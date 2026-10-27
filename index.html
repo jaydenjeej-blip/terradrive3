@@ -5433,3 +5433,11 @@ body.touch #touch.on #tRoleAction { display:flex !important; right:calc(env(safe
 
 <style>#tRoleAction{display:none!important;visibility:hidden!important;pointer-events:none!important}</style>
 <script>document.addEventListener('DOMContentLoaded',()=>{const b=document.getElementById('tRoleAction');if(b)b.remove();});</script>
+
+<style>
+/* Desktop UI correction: never apply the 72% touch-device scale on wide PC screens. */
+@media (min-width: 1101px) {
+  body.touch #hud, body.touch #menu, body.touch #tunesOverlay, body.touch #raceOverlay,
+  body.touch #customStudioOverlay, body.touch #bustOverlay, body.touch #crackOverlay { zoom: 1 !important; }
+}
+</style>
